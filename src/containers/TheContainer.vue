@@ -1,15 +1,13 @@
 <template>
   <div class="c-app">
-    <TheSidebar/>
+     
     <CWrapper>
       <TheHeader/>
       <div class="c-body">
-        <main class="c-main">
-          <CContainer fluid>
-            <transition name="fade" mode="out-in">
-              <router-view :key="$route.path"></router-view>
-            </transition>
-          </CContainer>
+        <main class="c-main"> 
+          <transition name="fade" mode="out-in">
+            <router-view :key="$route.path"></router-view>
+          </transition> 
         </main>
       </div>
       <TheFooter/>
@@ -17,15 +15,13 @@
   </div>
 </template>
 
-<script>
-import TheSidebar from './TheSidebar'
+<script> 
 import TheHeader from './TheHeader'
 import TheFooter from './TheFooter'
 
 export default {
   name: 'TheContainer',
   components: {
-    TheSidebar,
     TheHeader,
     TheFooter
   }

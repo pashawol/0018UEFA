@@ -1,0 +1,21 @@
+$default-font: "PF BeauSans Pro";
+$mono: "Bridge Type";
+// $file-form: ($file-formats: woff2 woff ttf);
+$addr: '/fonts/';
+$file-format: woff2;
+
+@include font-face ($default-font, $addr + "PFBeauSansPro-Regular", $file-formats: $file-format);
+@include font-face ($default-font, $addr + "PFBeauSansPro-Bold", bold, $file-formats: $file-format);
+@include font-face ($mono, $addr + "BridgeType-Regular", 400, $file-formats: $file-format);
+
+// font-weight helper:
+
+// 100 Thin
+// 200 Extra Light
+// 300 Light
+// 400 Normal
+// 500 Medium
+// 600 Semi Bold
+// 700 Bold
+// 800 Extra Bold
+// 900 Ultra Bold

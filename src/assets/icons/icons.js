@@ -20,7 +20,7 @@ import {
   cibCcVisa,
   cibStripe,
   cibPaypal,
-  cibGooglePay, 
+  cibGooglePay,
   cibCcAmex
 } from '@coreui/icons'
 import {
@@ -80,10 +80,26 @@ import {
 
 } from '@coreui/icons'
 import { logo } from './logo'
+import {
+  off,
+  user,
+  twitter,
+  facebook,
+  instagram,
+  vk,
+} from './sprite'
 
 export const iconsSet = Object.assign(
   {},
-  { logo },
+  {
+    logo,
+    off,
+    user,
+    twitter,
+    facebook,
+    instagram,
+    vk,
+  },
   {
     cilArrowRight,
     cilBan,
@@ -157,10 +173,10 @@ export const iconsSet = Object.assign(
     cibBehance,
     cibReddit,
     cibVimeo,
-    cibCcMastercard, 
-    cibCcVisa, 
-    cibStripe, 
-    cibPaypal, 
+    cibCcMastercard,
+    cibCcVisa,
+    cibStripe,
+    cibPaypal,
     cibGooglePay,
     cibCcAmex
   }

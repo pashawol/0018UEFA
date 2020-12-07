@@ -1,0 +1,24 @@
+.social{
+	display: flex;
+	align-items: center;
+	margin-left: rem(-4);
+	margin-right: rem(-4);
+	&__item{
+		
+		margin-left: rem(4);
+		margin-right: rem(4);
+		width: rem(31);
+		height: rem(31);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 2px solid #fff;
+		&:hover{
+			background-color: #ffffff;
+			path{
+				fill: #000 !important;
+			}
+		}
+	}
+}

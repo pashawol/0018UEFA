@@ -52,7 +52,7 @@ exports[`TheHeader.vue renders correctly 1`] = `
         to="/dashboard"
       >
         
-        Dashboard
+        Index
       
       </cheadernavlink-stub>
     </cheadernavitem-stub>

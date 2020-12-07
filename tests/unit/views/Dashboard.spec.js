@@ -1,37 +1,37 @@
 import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Dashboard from '@/views/Dashboard'
+import Index from '@/views/Index'
 
 
 Vue.use(CoreuiVue)
 
-describe('Dashboard.vue', () => {
+describe('Index.vue', () => {
   it('has a name', () => {
-    expect(Dashboard.name).toBe('Dashboard')
+    expect(Index.name).toBe('Index')
   })
   it('has a created hook', () => {
-    expect(typeof Dashboard.data).toMatch('function')
+    expect(typeof Index.data).toMatch('function')
   })
   it('sets the correct default data', () => {
-    expect(typeof Dashboard.data).toMatch('function')
-    const defaultData = Dashboard.data()
+    expect(typeof Index.data).toMatch('function')
+    const defaultData = Index.data()
     expect(defaultData.selected).toMatch('Month')
   })
   it('is Vue instance', () => {
-    const wrapper = shallowMount(Dashboard)
+    const wrapper = shallowMount(Index)
     expect(wrapper.vm).toBeTruthy()
   })
-  it('is Dashboard', () => {
-    const wrapper = shallowMount(Dashboard)
-    expect(wrapper.findComponent(Dashboard)).toBeTruthy()
+  it('is Index', () => {
+    const wrapper = shallowMount(Index)
+    expect(wrapper.findComponent(Index)).toBeTruthy()
   })
   it('should render correct content', () => {
-    const wrapper = shallowMount(Dashboard)
+    const wrapper = shallowMount(Index)
     expect(wrapper.find('#traffic').text()).toMatch('Traffic')
   })
   test('renders correctly', () => {
-    const wrapper = shallowMount(Dashboard)
+    const wrapper = shallowMount(Index)
     expect(wrapper.element).toMatchSnapshot()
   })
 })

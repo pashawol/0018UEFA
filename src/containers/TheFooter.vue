@@ -1,18 +1,30 @@
-<template>
-  <CFooter :fixed="false">
-    <div>
-      <a href="https://coreui.io" target="_blank">CoreUI</a>
-      <span class="ml-1">&copy; {{new Date().getFullYear()}} creativeLabs.</span>
-    </div>
-    <div class="mfs-auto">
-      <span class="mr-1" target="_blank">Powered by</span>
-      <a href="https://coreui.io/vue">CoreUI for Vue</a>
-    </div>
-  </CFooter>
+<template> 
+    <CFooter :fixed="false">
+      <CContainer> 
+        <CRow align-vertical="center">
+            <CCol  class="col-md-auto col">
+              <img src="../assets/img/footer-logo.png" alt="">
+            </CCol>
+            <CCol class="col-auto   order-md-last">
+              <TheSocialBtn/>
+            </CCol>
+            <CCol  class='col-md col-12 c-footer__col'>
+              <CRow align-vertical="center">
+                <CCol class="col-md-auto col"><a class="c-footer__link" href="#" target="_blank">Политика конфиденциальности</a></CCol>
+                <CCol class="col-auto"><a class="c-footer__link" href="#" target="_blank">Правила участия</a></CCol>
+              </CRow>
+            </CCol>
+        </CRow> 
+      </CContainer>
+    </CFooter> 
 </template>
-
 <script>
+import TheSocialBtn from './TheSocialBtn'
+
 export default {
-  name: 'TheFooter'
+  name: 'TheFooter',
+  components:{
+      TheSocialBtn
+  }
 }
 </script>

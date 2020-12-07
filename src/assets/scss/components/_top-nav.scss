@@ -1,0 +1,133 @@
+.top-nav{
+	background: transparent ;
+	border: none ;
+	z-index: 10;
+}
+
+.c-header{
+	@include media-breakpoint-up(lg){
+
+		padding-top: 0;  
+	}
+	padding-top: rem(20);
+	position: relative;
+	.c-icon-custom-size{
+		width: rem(138);
+		height: rem(72);
+	}
+		@include media-breakpoint-up(lg){
+
+			&::before,
+			&::after{
+			content: '';
+			position: absolute;
+			top: rem(36);
+			height: rem(60);
+			border-top: 1px solid #fff;
+			width: 100%;
+			min-width: calc(var(--pmInner) + #{rem(18)});
+			border-radius: rem(30);
+			width: calc((100% - var(--containerHeader) + #{rem(60)}) / 2);
+		}
+		
+		&::before{
+			left: calc(-1 * var(--pmInner));
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0; 
+		}
+		&::after{
+			min-width: rem(30);
+			right: calc(-1 * var(--pmInner));
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0; 
+			width: calc((100% - var(--containerHeader) + #{rem(40)}) / 2 + var(--rHeader));
+			
+		}
+	}
+}
+.c-header-nav{
+	justify-content: center;
+	position: relative;
+	min-height: 1px;
+}
+.nav-links { 
+	@include media-breakpoint-up(lg){
+
+			&::before,
+			&::after {
+			content: '';
+			position: absolute;
+			top: rem(16);
+			height: 1px;
+			background-color: #ffffff;
+			width: 100%;
+			min-width: rem(30); 
+			width: calc(50% - #{rem(300)});
+		}
+		
+		&::before {
+			left: 0; 
+		}
+		
+		&::after {
+			width: calc(50% - #{rem(280)});
+			right: rem(-20); 
+			// width: calc((100% - var(--containerHeader) + #{rem(40)}) / 2 + var(--rHeader));
+		}
+	}
+		
+}
+.nav-btns{
+	position: relative;
+	min-height: 1px;
+	@include media-breakpoint-up(lg){
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: rem(24);
+			height: rem(1);
+			background-color: #ffffff;
+			width: 100%; 
+			width: 1.5rem;
+		}
+		
+		&::before {
+			left: rem(48);
+		}
+	}
+}
+.c-header .c-header-nav .c-header-nav-link{
+	color: #ffffff !important;
+	&--text{
+
+		@extend .mono;
+		text-transform: uppercase;
+		font-size: rem(20);
+		border-bottom: 1px solid transparent;
+		&:hover{
+			border-color: currentColor;
+			color: $primary !important;
+		}
+	}
+	}
+
+
+.c-header-nav-link--with-icon{
+	width: rem(48);
+	height: rem(48);
+	border: 1px solid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	&:hover{
+		background-color: #ffffff;
+		circle,
+		path{
+			fill: #000 !important;
+		}
+	}
+}

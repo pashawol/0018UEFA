@@ -1,11 +1,17 @@
+$output-bourbon-deprecation-warnings: false;
+// @import "mq";
+@import "sass/bourbon/app/assets/stylesheets/bourbon";
 // If you want to override variables do it here
+@import "fonts";
 @import "variables";
 
 // Import styles
 @import "~@coreui/coreui/scss/coreui";
 
 // If you want to add something do it here
+@import "sass/main";
 @import "custom";
+@import "_root";
 
 .card-header:not(.content-center) > .c-icon:first-child {
   margin-right: 0.1rem;
@@ -15,3 +21,7 @@
   height: 1.2rem;
   font-size: 1.2rem;
 }
+@import "components/top-nav";
+@import "components/footer";
+@import "components/social";
+@import "components/menu-mobile";
