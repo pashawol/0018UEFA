@@ -15,9 +15,7 @@
 				:start-angle="30"
 				insert-mode="append"
 				:thickness="8"
-				:show-percent="false"
-				@vue-circle-progress="progress"
-				@vue-circle-end="progress_end">
+				:show-percent="false">
 				<p>{{item.p}}</p>
 			</vue-circle>  
 			<div class="TheCharts-item__caption">{{item.caption}}</div>

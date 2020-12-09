@@ -36,7 +36,7 @@ $success: $green !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
-$light: $gray-100 !default;
+$light: rgba($color:#2F3A3D, $alpha: .5) !default;
 $dark: $gray-800 !default;
 
 $theme-colors: () !default;
@@ -113,3 +113,9 @@ $input-btn-font-size: rem(20) !default;
 $input-border-radius: rem(20) !default;
 
 $link-color: $secondary !default;
+
+
+$modal-xl: 1400px !default;
+
+$form-feedback-icon-valid: none !default; 
+$form-feedback-icon-invalid: none !default;

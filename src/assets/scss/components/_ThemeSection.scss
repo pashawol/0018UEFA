@@ -12,21 +12,36 @@
 	margin-bottom: var(--bs-gutter-x);
 	color: #ffffff;
 	cursor: pointer;
+	position: relative;
+	--padding: #{rem(8)};
+	z-index: 2;
+	--pbBlock: calc(100% * 246 / 146);
+	@include media-breakpoint-up(md) {
+		--pbBlock: calc(100% * 293 / 388); 
+	}
 	&__img-wrap{
-		@include block(298, 146);
-			@include media-breakpoint-up(md) {
-	
-				@include block(388, 293);
-			}
+		// @include mt;
+		position: relative;
+		&::before { 
+			content: '';
+			position: relative;
+			height: 0;
+			display: block;
+			padding-bottom: var(--pbBlock);
+		}
+		// @include block(298, 146);
+			
 		border-radius: 15px;
-		overflow: hidden;
+		// overflow: hidden;
 		img{
+			border-radius: 15px;
 			width: 100%;
 			height: 100%;
 			left: 0;
 			top: 0;
 			position: absolute;
 			object-fit: cover;
+			@include mt;
 		}
 	}
 	&__head{
@@ -37,9 +52,10 @@
 		margin-bottom: rem(15);
 	}
 	&__title{
-		font-size: rem(40);
+		font-size: var(--f40);
 		@extend .mono;
 		line-height: 1;
+		// @include mt;
 	}
 	&__title-sm{
 		font-size: rem(13);
@@ -48,5 +64,61 @@
 	&__counter{
 		@extend .mono;
 		line-height: 1;	
+	}
+	&__count-wrap{
+		// @include mt;
+	}
+		.TheCharts {
+			justify-content: center;
+			width: 100%;
+			bottom: rem(40);
+			left: 0;
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+			position: absolute;
+			// opacity: 0;
+			// z-index: -1;
+			@include mt;
+			p{
+				font-size: rem(13);
+			}
+		}
+	&:hover {
+
+		// --pbBlock: calc(var(--pbBlock) - #{rem(70)});
+		.ThemeSection-item {
+			&__img-wrap {
+				position: static;
+				&::before{
+					padding-bottom: calc(var(--pbBlock) - #{rem(30)});
+				}
+				img {
+					width: calc(100% - var(--padding) * 2);
+					height: calc(100% - var(--padding) * 2);
+					left: var(--padding);
+					top: var(--padding);
+					z-index: -1;
+					opacity: 0.5; 
+				}
+			}
+			&__title{
+				text-align: center; 
+				--f40: #{rem(70)};
+			}
+			&__count-wrap {
+					width: 100%;
+					visibility: hidden;
+					z-index: -1;
+					height: 0;
+					overflow: hidden;
+					position: relative;
+			}
+
+		}
+		.TheCharts{
+			opacity: 1;
+			z-index: 1;
+		}
 	}
 }

@@ -13,7 +13,8 @@
 						:class='{
 							"TheLoacations-item--disabled": item.disabled,
 						 	"TheLoacations-item--audio": item.audio
-							}'  
+							}'
+							@click="qModal = true"  
 					>
 						<img :src='require("../assets/img/" + item.src)' alt="" class="img-bg">
 						<div class="TheLoacations-item__row row">
@@ -52,6 +53,65 @@
 						</div>
 					</div>
 				</div>
+					<!-- title="Modal title"
+					color="warning" -->
+				<div class="modalQ"> 
+					<CModal
+						size="xl"
+						:show.sync="qModal"
+						closeOnBackdrop= "false" 
+					>
+					 <div class="row g-0">
+						 <div class="col-lg-8">
+							 <div class="modal-block modal-block--left">
+								 <div class="h40 mono mb-3">Вопрос по локации</div>
+								 <p class="h20 mb-4">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона</p>
+									<div class="modal-block__img-wrap">
+										<img :src='require("../assets/img/modalImg.jpg")' alt="" class="res-i">
+									</div>
+								</div>
+							</div>
+							<div class="col-lg">
+								<form class="modal-block modal-block--right">
+									<div class="h30 mono mb-3 d-none d-lg-block">Введите ваш ответ</div>
+									<div class="d-none" >
+											<!-- label="Year" -->
+										<CSelect
+											placeholder="Введите ваш ответ"
+											:options="[2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025]"
+											class="mb-4"
+										/>
+										<CButton color="primary"  class="w-100 h30 mono mb-3" ><span></span>Отправить</CButton>
+									</div>
+									<div  class="d-none">
+											<!-- label="Year" -->
+										<CInput 
+												placeholder="Enter your name"
+												value="Ваш ответ"
+												wasValidated="true"
+												isValid="true"
+											/>
+										<CInput 
+												placeholder="Enter your name"
+												value="Ваш ответ"
+												wasValidated="true"
+												isValid="false"
+											/>
+										<CButton color="primary"  class="w-100 h30 mono mb-3" ><span></span>Перейти в локацию</CButton>
+									</div>
+									<div>
+										<label  class="btn-radio"><input type="radio" name="var" class="btn-radio__input"><span class="btn-radio__text">Вариант 1</span></label>
+										<label  class="btn-radio"><input type="radio" name="var" class="btn-radio__input"><span class="btn-radio__text">Вариант 2</span></label>
+										<label  class="btn-radio"><input type="radio" name="var" class="btn-radio__input"><span class="btn-radio__text">Вариант 3</span></label>
+										<label  class="btn-radio"><input type="radio" name="var" class="btn-radio__input"><span class="btn-radio__text">Вариант 4</span></label>
+										<label  class="btn-radio"><input type="radio" name="var" class="btn-radio__input"><span class="btn-radio__text">Вариант 5</span></label>
+									</div>
+									<CButton color="primary"  class="w-100 h30 mono mt-auto" ><span></span>Отправить</CButton>
+								</form>
+							</div>
+					 </div>
+					</CModal>
+				</div>
 		</div>
 	</div>	
 </template>
@@ -61,6 +121,7 @@ export default {
   name: 'TheTheLoacations',
   data() {
     return {
+				qModal: false,
 				headphones: "headphones",
 				items: [
 					{

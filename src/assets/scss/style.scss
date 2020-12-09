@@ -21,6 +21,7 @@ $output-bourbon-deprecation-warnings: false;
   height: 1.2rem;
   font-size: 1.2rem;
 }
+@import "components/form-wrap";
 @import "components/top-nav";
 @import "components/footer";
 @import "components/social";
@@ -29,3 +30,4 @@ $output-bourbon-deprecation-warnings: false;
 @import "components/ThemeSection";
 @import "components/TheCharts";
 @import "components/TheLoacations";
+@import "components/modal";

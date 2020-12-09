@@ -8,6 +8,7 @@ const TheContainer = () => import('@/containers/TheContainer')
 const Index = () => import('@/views/Index')
 const Theme = () => import('@/views/Theme')
 const Culture = () => import('@/views/Culture')
+const Q1 = () => import('@/views/Q1')
 
 
 Vue.use(Router)
@@ -41,6 +42,11 @@ function configRoutes() {
           path: '/culture',
           name: 'Culture',
           component: Culture
+        },
+        {
+          path: '/q1',
+          name: 'Q1',
+          component: Q1
         },
       ]
     },
