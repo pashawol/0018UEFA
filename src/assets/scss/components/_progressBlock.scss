@@ -1,0 +1,52 @@
+.progressBlock{
+	background-color: rgba($color: #fff, $alpha: .4);
+	width: rem(296);
+	padding: rem(8) rem(9);
+	height: rem(30);
+	border-radius: 22.6406px;
+	@include media-breakpoint-up(md) {
+		margin-bottom: rem(35);
+	}
+	&__bar{
+		display: flex;
+		margin-left: -1px;
+		margin-right: -1px;
+		align-items: center;
+		position: relative;
+		height: 100%;
+	}
+	&__item{
+		margin-left: 1px;
+		margin-right: 1px;
+		width: calc(100% / 5 - 2px);
+		background: #FFFFFF;
+		border-radius: rem(40); 
+		height: 100%;
+	}
+	&__total{
+		width: rem(42.62px);
+		height: rem(36.96px); 
+		background: #FFFFFF;
+		border: 1px solid #F7A600;
+		box-sizing: border-box;
+		border-radius: 150px;
+		@include a-cent(y);
+		font-size: rem(20);
+		text-align: center;
+		@extend .mono;
+		// line-height: 1;
+		z-index: 4;
+	}
+	&__count{
+		font-size: 20px;
+	}
+}
+
+.progressBlock--sm{
+	width: rem(152);
+	height: rem(18);
+	padding: rem(5) rem(6);
+	.progressBlock{
+
+	}
+}

@@ -87,6 +87,9 @@ import {
   facebook,
   instagram,
   vk,
+  arrowLeft,
+  arrowLeftStrong,
+  headphones
 } from './sprite'
 
 export const iconsSet = Object.assign(
@@ -99,6 +102,9 @@ export const iconsSet = Object.assign(
     facebook,
     instagram,
     vk,
+    arrowLeft,
+    arrowLeftStrong,
+    headphones
   },
   {
     cilArrowRight,

@@ -6,6 +6,8 @@ const TheContainer = () => import('@/containers/TheContainer')
 
 // Views
 const Index = () => import('@/views/Index')
+const Theme = () => import('@/views/Theme')
+const Culture = () => import('@/views/Culture')
 
 
 Vue.use(Router)
@@ -29,7 +31,17 @@ function configRoutes() {
           path: '/',
           name: 'Index',
           component: Index
-        }
+        },
+        {
+          path: '/theme',
+          name: 'Theme',
+          component: Theme
+        },
+        {
+          path: '/culture',
+          name: 'Culture',
+          component: Culture
+        },
       ]
     },
   ]

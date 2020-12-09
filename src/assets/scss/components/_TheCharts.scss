@@ -1,0 +1,20 @@
+.TheCharts{
+	display: flex;
+	@include roww(rem(46));
+	// justify-content: space-between;
+	justify-content: space-around;
+	// margin-bottom: rem(30);
+}
+.TheCharts-item{
+	color: #ffffff;
+	text-align: center;
+	p{
+		@extend .mono;
+		font-size: var(--f20);
+		margin-bottom: rem(10);
+		text-align: center;
+	}
+	&__caption{
+		font-size: 12px;
+	}
+}

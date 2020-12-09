@@ -1,0 +1,129 @@
+.TheLoacations{
+
+}
+
+.TheLoacations-item {
+	 position: relative;
+	 min-height: rem(200);
+	 height: calc(100% - var(--bs-gutter-x));
+	 margin-bottom: var(--bs-gutter-x);
+	 background:   #C4C4C4;
+	 position: relative;
+	 border-radius: 20px;
+	 overflow: hidden;
+	 @include media-breakpoint-up(lg) {
+
+		 padding: rem(32) rem(37) rem(10);
+		}
+		padding: rem(20) rem(22) rem(10);
+	 display: flex;
+	 flex-direction: column;
+	 	 .img-bg {
+	 	 	object-position: center;
+	 	 }
+
+	 	 &::after {
+	 	 	content: '';
+	 	 	@include a-cent;
+	 	 	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #00000061 67%);
+	 	 	border-radius: 20px;
+	 	 	z-index: -1;
+	 	 }
+	 &--disabled{
+		 @include media-breakpoint-up(lg){
+			 
+			 padding-right: rem(100);
+		 }
+		 &::before{
+			 content: url(./assets/img/lock.svg);
+			 @include a-cent1(y);
+						 @include media-breakpoint-up(lg){
+			 right: rem(50);
+			}
+			right: rem(20);
+			 z-index: 4;
+		 }
+		 &::after{
+			 background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.67) 100%);
+		 }
+	 }
+	 &--audio{
+		 &:before{
+			 content: '';
+		 }
+		 padding-right: rem(58);
+	 }
+	 &__row{
+		 flex-grow: 1;
+	 }
+	 
+
+	 border-radius: 20px;
+	 color: #ffffff;
+	 &__title{
+		 @extend .mono;
+		 font-size: var(--f40);
+		 padding-bottom: rem(10);
+	 }
+	.progressBlock{
+		margin-left: auto;
+		// padding-bottom: 2rem;
+		
+	}
+	&__head{
+		
+		margin-bottom: auto;
+	}
+	&__count{
+		@extend .mono;
+		color: $primary;
+		font-size: var(--f30);
+		padding-bottom: rem(10);
+	}
+	&__main-col{
+		display: flex;
+		flex-direction: column;
+	 
+	}
+	&__foot{
+		align-items: center;
+	}
+	&__btn{ 
+		--btnBorderW: 2px;
+		border-radius: 20px;
+		width: rem(244);
+		font-size: 1rem;
+		font-weight: bold;
+		padding-left: rem(5);
+		padding-right: rem(5);
+		color: $primary;
+		margin-top: auto;
+		margin-bottom: rem(10);
+	}
+	p{
+		max-width: rem(380);
+		font-size: var(--f20);
+	}
+	&__label{
+		@include media-breakpoint-up(md) {
+			position: relative;
+			border: 2px solid #F7A600;
+			box-sizing: border-box;
+			border-radius: 20px;
+			width: rem(92);
+			height: rem(92);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: rem(10);
+		}
+		position: absolute;
+		right: rem(20);
+		bottom: rem(20);
+		cursor: pointer; 
+		img{
+			width: rem(40);
+			flex: 0 0 auto;
+		}
+	}
+}

@@ -5,7 +5,7 @@
       <img class='img-top d-none d-lg-block' src='../assets/img/img-top.png' alt="">
     </div>
 
-    <div class="main-page">
+    <div class="main-page main-page--index">
       <CContainer>
         <div class="d-none d-md-block">
           <BtnVideo/>

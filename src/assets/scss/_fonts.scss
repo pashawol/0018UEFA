@@ -1,7 +1,7 @@
 $default-font: "PF BeauSans Pro";
 $mono: "Bridge Type";
 // $file-form: ($file-formats: woff2 woff ttf);
-$addr: '/fonts/';
+$addr: './assets/fonts/';
 $file-format: woff2;
 
 @include font-face ($default-font, $addr + "PFBeauSansPro-Regular", $file-formats: $file-format);
